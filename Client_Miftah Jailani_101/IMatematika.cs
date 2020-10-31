@@ -20,7 +20,5 @@ namespace ServiceMtk_P1_101
         int Kali(int a, int b);
         [OperationContract]
         int Bagi(int a, int b);
-        [OperationContract]
-    }
-
+    }  
 }

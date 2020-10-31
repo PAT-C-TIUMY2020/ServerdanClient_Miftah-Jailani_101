@@ -26,16 +26,14 @@ namespace Client_Miftah_Jailani_101
             ChannelFactory<IMatematika>(bind, "http://localhost:1910");
             IMatematika obj = objChannel.CreateChannel();
             double hasilTambah = obj.Tambah(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
-            Console.WriteLine(hasilTambah);
-            double hasilKurang = obj.Tambah(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
-            Console.WriteLine(hasilKurang);
-            double hasilKali = obj.Tambah(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
-            Console.WriteLine(hasilKali);
-            double hasilBagi = obj.Tambah(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
-            Console.WriteLine(hasilBagi);
+            label3.Text = "Hasil Penjumlahan : " + hasilTambah; //add label1.Text + var hasilTambah
+            double hasilKurang = obj.Kurang(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
+            label4.Text = "Hasil Pengurangan : " + hasilKurang; //add label1.Text + var hasilTambah
+            double hasilKali = obj.Kali(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
+            label5.Text = "Hasil Perkalian : " + hasilKali; //add label1.Text + var hasilTambah
+            double hasilBagi = obj.Bagi(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
+            label6.Text = "Hasil Pembagian : " + hasilBagi; //add label1.Text + var hasilTambah
             Console.ReadLine();
-
-
         }
     }
 }
